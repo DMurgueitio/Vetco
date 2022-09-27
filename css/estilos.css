@@ -1,0 +1,931 @@
+*{
+    text-decoration: none;
+    list-style:none;
+    box-sizing:border-box;
+    font-family: 'VAG Rounded';
+
+}
+
+:root{
+    --blanco:#ffffff;
+    --moradoOscuro:#441C79;
+    --moradoClaro:#B579B2;
+    --verdeAguaCalro:#47ACC1;
+    --verdeAguaOscuro:#0D5968;
+    --grisCalro:#F2F2EF;
+    --grisOscuro:#C8C8C7;
+}
+
+/*INICIA ESTILOS NAVBAR - BARRA DE MENU*/
+
+.barranavegacion{
+    background-color:var(--moradoOscuro);
+    text-align: center;
+}
+
+.isotipo{
+    width: 40px;
+}
+.navbar-toggler-icon{
+    color: var(--blanco);
+}
+
+li a{
+    text-decoration: none;
+    color:var(--blanco);    
+}
+
+li a:hover{
+    color:var(--moradoClaro);
+    transition: .2s;
+}
+
+.contenedorLogo{
+    height: 130px;
+    width: 250px ;
+    position: absolute;
+    top: 0px; left: 43vw;
+    z-index:1;
+    background-color: var(--moradoOscuro);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.logo{
+    width: 130px;
+    margin-top: 15px;
+}
+
+.logoResponsivo{
+    width: 80px;
+    margin: 4px 0px;
+}
+
+.segundonav{
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+
+.linksegundonav{
+    color:var(--verdeAguaCalro);
+}
+
+.linksegundonav:hover{
+    color: var(--verdeAguaOscuro);
+}
+
+/* FINALIZA ESTILOS NAVBAR - BARRA DE MENU
+
+
+
+
+/* INICIA ESTILOS FOOTER */
+footer{
+    background-color: var(--moradoOscuro);
+    /* background-image: url("../image/perroygatoFooter.jpg"); */
+    color: var(--blanco);
+    padding: 0 3vw;
+}
+
+.imagenFooter{
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    mix-blend-mode: multiply;
+    top: 0;
+    
+}
+
+footer .parrafo{
+    text-align: center;
+    font-size: 1.3vw;
+    margin: 30px 0px 50px;
+}
+
+.contenedorContacto{
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorDireccion{
+    background-color: var(--moradoClaro);
+    padding: 2vw 2vw;
+    height: 20vw;
+    border-radius: 1vw 0vw 0vw 1vw;
+}
+
+.iconosRedes{
+    align-items: center;
+}
+.contenidoContacto{
+    width: 90%;
+    
+}
+
+.tituloUbicacion{
+    padding-left: 80px;
+    font-size: 30px;
+}
+
+.tituloContacto{
+    font-size: 30px;
+}
+
+.contenedorIconosRedes{
+    width: 5vw;
+    height: 5vw;
+    background-color: var(--blanco);
+    text-align: center;
+    margin:1vw;
+}
+
+.fa-brands{
+    color: var(--verdeAguaOscuro);
+    font-size: 3vw;
+    padding-top: 1vw;
+}
+
+.infoDireccion{
+    font-size: 1.5vw;
+    
+}
+
+.contenedorFormulario{
+    background-color: var(--blanco);
+    margin: 3vw auto;
+    padding: 1vw;
+    text-align: center;
+    
+}
+
+.contenedorFormulario  .form-control{
+    margin: 1vw 0vw;
+    background-color: var(--grisCalro);
+    border: none;
+    
+}
+
+.botonMorado{
+    background-color: var(--moradoOscuro);
+    color: var(--blanco);
+    width: 25%;
+    
+}
+
+.derechosReservados{
+    text-align: center;
+    margin: 1vw 0vw;
+}
+.listaNav{
+    font-size: 20px;
+    
+} 
+/*FINALIZA ESTILOS FOOTER*/
+
+/* Inicia CSS Quienes Somos */
+
+.containerQS{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    color:#ffffff;
+}
+
+
+.logoVetco{
+    width: 50%;
+    position: absolute;
+    top: 24vw;
+    z-index: 2; 
+}
+
+.imagenlogoVetco {
+    width: 40%;
+    
+   
+}
+
+.logoVetco p{
+    font-size: 2vw;
+    color: var(--blanco);
+    
+}
+
+.imagen-fondo img{
+    width: 100%;
+    /* z-index: -2; */
+}
+
+.imagen-encima{
+    width: 50vw; 
+    height: 47.5vw;
+    background-color: #0D5968;
+    opacity: 0.5;
+    color: #ffffff;
+    z-index: 2;
+    mix-blend-mode: multiply;
+    position: absolute;
+    bottom: 0.8vw;
+} 
+
+/* .texto-encima{
+    margin-left: 40px;
+    padding: 150px;
+    text-align: justify;
+    font-size: 20px;
+    color: #ffffff;
+    z-index: 1;
+} */
+
+/* Finaliza CSS Quienes Somos */
+
+/*Inicia CSS Historia Clinica*/
+
+.historia{
+    background-color: #441C79;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    border-radius: 10px;
+}
+.containerHS{
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'VAG Rounded';
+    color: #ffffff;
+    border: 3px solid #eff0ef;
+}
+
+.form-control, .form-select{
+    /* background-color: #F2F2EF;   */
+}
+
+.imagen{
+   width: 40px;
+   height: 40px;
+}
+
+.btn{
+    color: #ffffff;
+    background-color: #47ACC1;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'VAG Rounded';
+}
+.btn1{
+    color:#47ACC1;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+}
+/*Finaliza CSS Historia Clinica*/
+
+
+
+/*Inicia CSS de perfil mascota*/
+.fondo{
+    width: 100%;
+    padding: 20px;
+    background: linear-gradient(#47ACC1, #441C79);
+}
+.contenedor-formulario{
+    background-color: #ffffff;
+    border-radius: 10px;
+} 
+.perfilMascota{
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*Finaliza CSS de perfil mascota*/
+
+
+/*Inicia CSS de Registro*/
+.fondoRG{
+    margin: 0px auto; 
+    width: 1272px;
+    height: 512px;
+    background: linear-gradient(#47ACC1, #441C79);
+}
+.containerRG{
+    margin: 0px auto; 
+    width: 1100px;
+    height: 324px;
+    font-family: 'VAG Rounded';
+}
+
+.registro{
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px;
+}
+/*Finaliza CSS de Registro*/
+
+/*Inicia CSS de Registro Servicio*/
+.fondoRS{
+    display: flex;
+    justify-content: center;
+    margin:0px auto; 
+    width: 1267px;
+    height: 470px;
+    background: linear-gradient(#47ACC1, #441C79);
+}
+.containerRS{
+    justify-content: center;
+    margin: 0px auto; 
+    width: 1101px;
+    height: 407px;
+    font-family: 'VAG Rounded';
+}
+/*Finaliza CSS de Registro Servicio*/
+
+/*Inicia Perfil de Nombre*/
+.fondoPN{
+    width: 100%;
+    background: #47ACC1;
+}
+.perfilNombre{
+    text-align: center;
+    color: #441C79;
+}
+
+.container-nombre{
+    background: #ffffff;
+    font-family: 'VAG Rounded';
+    border-radius: 10px;
+    margin-right:auto
+}
+.imagenPN{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 60vw;
+}
+.contenedor-imagen{
+    justify-content: center;
+    display: flex;
+    margin-top: 10px;
+}
+.btn-atrasPN{
+    background-color: #47ACC1;
+    margin-bottom: 10px;
+    color:#ffffff;
+    font-family: 'VAG Rounded';
+}
+/*Finaliza Perfil de Nombre*/
+
+/*Inicia Vista Formulario Historia Clinica*/
+.fondo-morado{
+    background-color: #441C79;
+    color: #ffffff;
+    
+}
+
+ .formularioVistaInfoMascota{ /* Agrege esta clase para centrar el contenido */
+   margin-left: 6px;
+   padding: 50px;
+   
+    
+}
+
+.sintomas{
+    background: #ffffff;
+    border-radius: 10px;
+    color:var(--grisOscuro);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px;
+}
+
+
+.titulo h2,h4{
+color:#441C79;
+}
+
+.vacunas{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+/*Finaliza Vista Formulario Historia Clinica*/
+
+/*INCIA  ESTILOS PAGINA BUSCAR*/
+.contenedorFormularioBuscar{
+    background-color: var(--moradoClaro);
+    width: 80%;
+    text-align: center;
+    padding: 30px;
+    border-radius: 1vw;
+    margin: 2vw;
+
+}
+
+.botonAzul{
+    background-color: var(--verdeAguaCalro);
+    color: var(--blanco);
+    border: none;
+}
+
+.inputBuscar{
+    margin: 1vw;
+}
+
+.moverplaceholder{
+    padding-left: 30px;
+}
+
+.inputBuscarIcono{
+    position: relative;
+}
+
+.iconoLupa{
+    position: absolute;
+    left:30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--grisOscuro);
+}
+
+.fondo-gris{
+    background-color: var(--grisCalro);
+    display: flex;
+    justify-content: center;
+}
+.contenedorCategorias{
+    display: flex;
+    justify-content: center;
+}
+
+.isotipoCategorias{
+    width: 45px;
+    margin-top: 5px;
+}
+
+.isotipoEspejo{
+    transform: scaleX(-1);
+}
+
+.tituloCategoria{
+    text-align: center;
+}
+.tituloCategoria h1{
+    text-transform: uppercase;
+    color: var(--verdeAguaCalro);
+    margin-top: 10px;
+}
+
+a .contendorIconosCategoria{
+    width: 14vw;
+    height: 14vw;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorTextoCategoria p{
+    color: var(--moradoOscuro);
+    font-size: 2.5vw;
+}
+
+a {
+    text-decoration: none;
+}
+    /* soporte de navegadores para el cambio del color del placeshoder de los imput */
+  #cambioColorPlacehoder::placeholder {
+    color:var(--grisOscuro);
+  }
+  
+  #cambioColorPlacehoder::-webkit-input-placeholder {
+    color:var(--grisOscuro);
+  }
+
+  #cambioColorPlacehoder::-moz-placeholder {
+    color:var(--grisOscuro);
+  }
+
+  #cambioColorPlacehoder:-ms-input-placeholder {
+    color:var(--grisOscuro);
+  }
+  
+  #cambioColorPlacehoder:-moz-placeholder {
+    color:var(--grisOscuro);
+  }
+   /* soporte de navegadores para el cambio del color del placeshoder de los imput */
+
+
+/*FINALIZA INCIA  ESTILOS PAGINA BUSCAR*/
+
+
+/*Inicia CSS de Calificacion Servicio*/
+
+.contenedor-calificacion-servicios{
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.calificacionServicio{
+    display: flex;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.btncalificacion{
+    color: #ffffff;
+    background-color: #47ACC1;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-family: 'VAG Rounded';
+}
+.btn1calificacion{
+    color:#47ACC1;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+}
+
+ 
+/*Finaliza CSS de calificacion Servicio*/
+
+/*Inicia CSS de foro_TemasRelacionados*/
+
+
+
+
+/*Finaliza CSS de foro_TemasRelacionados*/
+
+
+
+/*Inicia CSS de Login */
+
+.contenedorFormularioLogin{
+    background-color: var(--blanco);
+    margin: 2vw auto;
+    padding: 1vw;
+    text-align: left;
+    width: 27%;
+    border-radius: 20px;
+  }
+  
+  .btniniciarsesion{
+    background-color: #B579B2;
+    color: #ffffff;
+    margin-bottom: 5px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+    width: 85%;
+  }
+  
+
+  .btnlogin-iniciarsesion{
+    display: flex;
+    justify-content: center;
+    box-shadow:#C8C8C7; 
+    font-family: 'VAG Rounded';
+  
+  }
+  
+  .recordarcontrasena{
+    display: flex;
+    justify-content: center;
+    color: red;
+  
+  }
+  
+  .btn1login{
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+    justify-content: center;
+  }
+  
+  .contrasena{
+    box-shadow:4px 4px 10px var(--grisOscuro);
+  
+  }
+  
+  .usuario{
+    box-shadow:4px 4px 10px var(--grisOscuro);
+  
+  }
+  
+  .imglogo{
+    width:150px;
+  }
+  
+  .circulo-logo{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 850px;
+    top: 100px;
+  
+  }
+
+  .circulo-logo{
+    box-shadow:4px 4px 10px var(--grisOscuro);
+  }
+
+  .fondologin{
+    background-image: url("../css/image/fondologin.jpeg");
+    background-size: cover;
+    height: 50vw;
+    width: 100vw;
+    
+  }
+
+
+/*Finaliza CSS de Login */
+
+/*Inicia CSS de Recuperar Contraseña */
+.contenedorRecordarcontrasena{
+    background-color: var(--blanco);
+    margin: 10vw auto;
+    text-align: left;
+    width: 30%;
+    height: 40%;
+    border-radius: 10px;
+  }
+  
+  .btnrecordarcontrasena{
+    background-color: #B579B2;
+    color: #ffffff;
+    margin-bottom: 5px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+    width: 40%;
+  }
+  
+
+  .btn-Recordarcontrasena{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow:#C8C8C7; 
+    font-family: 'VAG Rounded';
+  }
+  
+  
+  .btn1Recuperarcontrasena{
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+    justify-content: center;
+  }
+  
+  
+  
+  .Usuariorecuperarcontrasena{
+    box-shadow:4px 4px 10px var(--grisOscuro);
+  
+  }
+
+  .Recuperarcontrasena{
+    justify-content: center;
+    color: #ffffff;
+    background-color: #441C79;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+  .textoInstrucciones{
+    margin: 15px;
+  }
+
+  .Usuariorecuperarcontrasena{
+    margin: 10px;
+    width: 96%;
+    height: 30%;
+
+  }
+
+  .recordarcontrasenafondo{
+    background-image: url("../css/image/fondorecuperarcontraseña.jpeg");
+    background-size: cover;
+    height: 50vw;
+    width: 100vw;
+    display: flex;
+    
+  }
+
+  
+
+  /* Finaliza CSS de Recuperar Contraseña */
+
+
+  /*Inicia CSS de anuncio */
+.contenedoranuncio{
+    background-color: var(--blanco);
+    margin: 10vw auto;
+    text-align: left;
+    width: 25%;
+    height: 30%;
+    border-radius: 10px;
+  }
+  
+  .btnanuncioregistro{
+    background-color: #B579B2;
+    color: #ffffff;
+    margin-bottom: 5px;
+    border-color:transparent;
+    font-family: 'VAG Rounded';
+    width: 90%;
+    height: 50%;
+  }
+  
+
+  .btn-anuncioregistro{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    box-shadow:#C8C8C7; 
+    font-family: 'VAG Rounded';
+    align-items: center;
+  }
+  
+  
+
+  .anuncioanuncio{
+    justify-content: center;
+    color: #ffffff;
+    background-color: #441C79;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  
+
+  .anuncio{
+    background-image: url("../css/image/fondorecuperarcontraseña.jpeg");
+    background-size: cover;
+    height: 50vw;
+    width: 100vw;
+    display: flex;
+    
+  }
+
+  /*Finaliza css de anuncio */
+
+  /*INICIA ESTILOS PAGINA MOSTRAR RESULTADOS*/
+
+.imagenCard{
+    height: 200px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 100%;
+}
+
+.contenedorTextoCardSombra{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 160px;
+    height: 160px;
+    background-color: var(--grisOscuro);
+    border-radius: 50%;
+    box-shadow: 8px 10px 10px var(--grisOscuro);
+    mix-blend-mode: multiply;
+    margin-top: -163px;
+}
+
+.imagenLogoComercio{
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 1;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid var(--grisCalro);
+    margin-top: -110px;
+}
+
+.card:hover .imagenLogoComercio{
+    border-color: var(--moradoOscuro);
+    transition: 1s;
+
+}
+
+.card{
+    box-shadow: 5px 5px 6px var(--grisOscuro);
+    /* overflow: hidden;  oculta el contenido que se desborde - consultar*/
+    border-radius: 15px;
+    border: 0.5px solid var(--grisCalro)
+}
+
+.contenedorTextoCard{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contenedorTextoCard h2{
+    color: var(--moradoOscuro);
+    font-size: 25px;
+    margin: 0 0 10px;
+    
+}
+
+.contenedorTextoCard p{
+    color: var(--grisOscuro);
+    font-size: 16px;
+    padding: 0 15px;
+}
+
+.botonCard{
+    background-color: var(--moradoOscuro);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: right;
+}
+
+.textobotonCard{
+    color: var(--blanco);
+}
+
+.botonCard i{
+    color: var(--verdeAguaCalro);
+}
+
+.botonCard a{
+    font-size: 25px;
+    text-decoration: none;
+    padding-right: 10px;
+}
+
+.botonCard a:hover{
+    color: var(--verdeAguaCalro);
+}
+
+/*INICIA ESTILOS PAGINA VISTA INFORMACION EMPRESAS*/
+
+.contenedorInfoEmpresa{
+    padding: 0 50px;
+}
+
+.btnAzul{
+    width: auto;
+    border: none;
+    background-color: var(--verdeAguaCalro);
+}
+
+.btnAzul a{
+    color: var(--blanco);
+    text-decoration: none;
+}
+.contenedorBoton{
+    display: flex;
+    justify-content: right;
+}
+
+.imagenVistaInfoEmpresa{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.contenedorTextoInfoEmpresa{
+    border: 2px solid var(--grisCalro);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 15px 0;
+    box-shadow: 6px 5px 6px var(--grisCalro);
+}
+
+.contenedorInfoEmpresa h1, h3{
+    color: var(--moradoOscuro);
+}
+
+.contenedorInfoEmpresa p{
+    color: var(--grisOscuro);
+    font-size: 15px;
+}
+
+.contenedorInfoEmpresa p i{
+    color: #25D366;
+    font-size: 20px;
+    
+}
+
+/*FINALIZA ESTILOS PAGINA VISTA INFORMACION EMPRESAS*/
+
+
+
