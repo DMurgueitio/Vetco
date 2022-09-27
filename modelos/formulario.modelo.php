@@ -32,7 +32,47 @@ class ModeloFormularios{
     /*=============================================
     FIN INSERCION A LA TABLA CREAR PERFIL
     =============================================*/
+    static public function mdlCrearUsuario($tabla,$datos){
+$stmt =Conexion::conectar()->prepare("INSERT INTO tblregistro(di,nombres,apellidos,tipodi,
+                                                    email,ciudad,direccion,rol,
+                                                    telefonocel,telefonofijo,
+                                                    contrasena,codiGenero) 
+         VALUES(:documento,
+                :nombres,
+                :apellidos,
+                :tipo_identificacion,
+                :correo,
+                :Ciudad,
+                :direccion,
+                :rol,
+                :Telefono_Celular,
+                :Telefono_Fijo,
+                :contra,
+                :Genero)");
 
+                $stmt->bindParam(":documento",$datos["documento"],PDO::PARAM_STR);
+                $stmt->bindParam(":nombres",$datos["nombres"],PDO::PARAM_STR);
+                $stmt->bindParam(":apellidos",$datos["apellidos"],PDO::PARAM_STR);
+                $stmt->bindParam(":tipo_identificacion",$datos["tipo_identificacion"],PDO::PARAM_STR);
+                $stmt->bindParam(":correo",$datos["correo"],PDO::PARAM_STR);
+                $stmt->bindParam(":Ciudad",$datos["Ciudad"],PDO::PARAM_STR);
+                $stmt->bindParam(":direccion",$datos["direccion"],PDO::PARAM_STR);
+                $stmt->bindParam(":rol",$datos["rol"],PDO::PARAM_STR);
+                $stmt->bindParam(":Telefono_Celular",$datos["Telefono_Celular"],PDO::PARAM_STR);
+                $stmt->bindParam(":Telefono_Fijo",$datos["Telefono_Fijo"],PDO::PARAM_STR);
+                $stmt->bindParam(":contra",$datos["contra"],PDO::PARAM_STR);
+                $stmt->bindParam(":Genero",$datos["Genero"],PDO::PARAM_STR);
+             
+                if($stmt->execute()){
+                    return "ok";
+                }else{
+                    print_r(Conexion::conectar()->errorInfo());
+                }
+                $stmt->Close();
+                $stmt = null;
+
+    }
+    
 
     /*REGISTRO SERVICIOS*/
     static public function mdlRegistroServicios($tabla, $datos){
@@ -147,7 +187,16 @@ static public function mdlSeleccionarRegistroTablaMostrarServicioss($tabla, $ite
     $stmt->Close();
     $stmt = null;
 }
+static public function mdlSeleccionarRegistroTablaTipoDocumento($tabla, $item, $valor){
+    if($item == null && $valor == null){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
 
+        $stmt ->execute();
+        return $stmt -> fetchAll();
+    }
+    $stmt->Close();
+    $stmt = null;
+}
 
 static public function mdlSeleccionarRegistroTablaTipoServicio($tabla, $item, $valor){
     if($item == null && $valor == null){
@@ -200,6 +249,3 @@ static public function mdlSeleccionarRegistroTablaGeneroMascota($tabla, $item, $
 }
 
 }
-
-
-?>
