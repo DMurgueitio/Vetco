@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 archivo con cualquier cosa escrita
 hola cualquier cosa
+=======
+archivo con cualquier cosa escrita hola hola
+xxxxxxxxotra cualquier cosa 
+>>>>>>> master
