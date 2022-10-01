@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-sm-12 col-lg-3 col-md-3 mt-2">
                             <select name="generoMascota" id="" class="form-select">
-                            <option value="0">SeLeccionar Genero</option>
+                            <option value="0">Seleccionar Genero</option>
                             <?php
                                 foreach($generoMascota as $genero=>$value):?>
                                 <option value="<?php echo $value['codiGeneroAni']; ?>"><?php echo $value['descGeneroAni']; ?></option>

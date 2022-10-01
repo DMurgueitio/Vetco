@@ -32,6 +32,10 @@ class ModeloFormularios{
     /*=============================================
     FIN INSERCION A LA TABLA CREAR PERFIL
     =============================================*/
+
+    /*=============================================
+    INICIO INSERCION A LA TABLA CREAR USUARIO
+    =============================================*/
     static public function mdlCrearUsuario($tabla,$datos){
 $stmt =Conexion::conectar()->prepare("INSERT INTO tblregistro(di,nombres,apellidos,tipodi,
                                                     email,ciudad,direccion,rol,
@@ -72,7 +76,10 @@ $stmt =Conexion::conectar()->prepare("INSERT INTO tblregistro(di,nombres,apellid
                 $stmt = null;
 
     }
-    
+
+    /*=============================================
+    FIN INSERCION A LA TABLA CREAR USUARIO
+    =============================================*/
 
     /*REGISTRO SERVICIOS*/
     static public function mdlRegistroServicios($tabla, $datos){
@@ -124,6 +131,7 @@ $stmt =Conexion::conectar()->prepare("INSERT INTO tblregistro(di,nombres,apellid
 /*=============================================
 	FIN INSERCION A LA TABLA ROL
 =============================================*/
+
 
 static public function mdlRegistroContactenos($tabla,$datos){
     $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombresApellidos,celular,correo,mensaje) VALUES (:nombreCompleto, :numCelular, :email, :informacion)");
@@ -248,4 +256,32 @@ static public function mdlSeleccionarRegistroTablaGeneroMascota($tabla, $item, $
     $stmt = null;
 }
 
+static public function mdlSeleccionarRegistroTablaGenerohumano($tabla, $item, $valor){
+    if($item == null && $valor == null){
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt->execute();
+        return $stmt ->fetchAll();
+    }
+        $stmt->Close();
+        $stmt = null;
+    }
+
+    static public function mdlSeleccionarRegistroTablaCiudad($tabla, $item, $valor){
+        if($item == null && $valor == null){
+            $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+            $stmt->execute();
+            return $stmt ->fetchAll();
+        }
+            $stmt->Close();
+            $stmt = null;
+        }
+    static public function mdlSeleccionarRegistroTablaRol($tabla, $item, $valor){
+        if($item == null && $valor == null){
+            $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+            $stmt->execute();
+            return $stmt ->fetchAll();
+        }
+            $stmt->Close();
+            $stmt = null;
+        }
 }

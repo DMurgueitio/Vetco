@@ -99,9 +99,12 @@ class ControladorFormularios
 
             $respuesta = ModeloFormularios::mdlCrearUsuario($tabla, $datos);
             return $respuesta;
+
+            
         }
     }
     /* Fin Formulario Registro  Usuario */
+
 
 
 
@@ -262,4 +265,27 @@ class ControladorFormularios
         $respuesta = ModeloFormularios::mdlSeleccionarRegistroTablaGeneroMascota($tabla, $item, $valor);
         return $respuesta;
     }
+
+    /* METODO PARA LLAMAR LOS REGISTROS DE LA TABLA GENERO HUMANO*/
+    static public function ctrSeleccionarRegistroTablaGeneroHumano($item, $valor)
+    {
+        $tabla = "tblgenerohumano";
+        $respuesta = ModeloFormularios::mdlSeleccionarRegistroTablaGenerohumano($tabla, $item, $valor);
+        return $respuesta;
+    }
+
+        /* METODO PARA LLAMAR LOS REGISTROS DE LA TABLA CIUDAD*/
+        static public function ctrSeleccionarRegistroTablaCiudad($item, $valor)
+        {
+            $tabla = "tblciudad";
+            $respuesta = ModeloFormularios::mdlSeleccionarRegistroTablaCiudad($tabla, $item, $valor);
+            return $respuesta;
+        }
+
+        static public function ctrSeleccionarRegistroTablaRol($item, $valor)
+        {
+            $tabla = "tblrol";
+            $respuesta = ModeloFormularios::mdlSeleccionarRegistroTablaRol($tabla, $item, $valor);
+            return $respuesta;
+        }
 }

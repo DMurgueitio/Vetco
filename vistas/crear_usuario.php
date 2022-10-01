@@ -1,6 +1,8 @@
 <?php
 $seleccionarServicios=ControladorFormularios::ctrSeleccionarRegistroTablaTipoDocumento(null,null);
-
+$generoHumano=ControladorFormularios::ctrSeleccionarRegistroTablaGeneroHumano(null,null);
+$ciudad=ControladorFormularios::ctrSeleccionarRegistroTablaCiudad(null,null);
+$rol=ControladorFormularios::ctrSeleccionarRegistroTablaRol(null,null);
 ?>
 <!-- <div class="container-fluid"> -->
 <div class="fondo container-fluid">
@@ -26,20 +28,26 @@ $seleccionarServicios=ControladorFormularios::ctrSeleccionarRegistroTablaTipoDoc
                         <option value="0">Seleccione Tipo Documento</option>
                         <?php
                         foreach ($seleccionarServicios as $seleccionarServicios => $value):?>
-                            <option value="<?php echo $value['id']; ?>"><?php echo $value['nombre'];?> </option>
-                        <?php
+                                <option value="<?php echo $value['id']; ?>"><?php echo $value['nombre']; ?></option>
+                        <?php 
                         endforeach;
                         ?>
-                    </select>
+                        </select>
                 </div>
+                
                 <div class="col-sm-12  col-md-4 mt-2">
                     <input type="text" name="di" class="form-control" id="di" placeholder=" Nro. Documento de Identidad" >
                 </div>
                 <div class="col-sm-12  col-md-4 mt-2">
                     <select type="number" name="genero" class="form-select" id="gen">
-                        <option value="1">Mujer</option>
-                        <option value="2">Hombre</option>
-                        <option value="3">Mezcla</option>
+                    <option value="0">Seleccione Genero</option>
+                        <?php
+                            foreach($generoHumano as $genero=>$value):
+                        ?>
+                            <option value="<?php echo $value['codiGenero']; ?>"><?php echo $value['descGenero']; ?></option>
+                        <?php
+                        endforeach;
+                        ?>
                     </select>
                 </div>
 
@@ -47,9 +55,14 @@ $seleccionarServicios=ControladorFormularios::ctrSeleccionarRegistroTablaTipoDoc
                     <input type="text" name="email" class="form-control" id="correo" placeholder="Correo Electronico" >
                 </div>
                 <div class="col-sm-12 col-md-4 mt-2">
-                    <select type="text" name="ciudad" class="form-select" id="ciudad" placeholder="Ciudad" >
-                        <option value="1">Cali</option>
-                        <option value="2">Medellin</option>
+                    <select type="text" name="ciudad" class="form-select" id="ciudad" >
+                    <option value="0">Seleccione Ciudad</option>
+                    <?php
+                    foreach($ciudad as $ciudadUsuario=>$value):  
+                        ?>                  
+                        <option value="<?php echo $value['codigo'];?>"><?php echo  $value['nombre'];?></option>
+                        <?php endforeach;
+                        ?>
                     </select>
                 </div>
                 <div class="col-sm-12 col-md-4 mt-2">
@@ -58,8 +71,14 @@ $seleccionarServicios=ControladorFormularios::ctrSeleccionarRegistroTablaTipoDoc
 
                 <div class="col-sm-12 col-md-4 mt-2">
                     <select type="text" name="rol" class="form-select" id="rol" placeholder="Afilate como" >
-                        <option value="1">Veterinario</option>
-                        <option value="2">Proveedor </option>
+                    <option value="0">Afiliate Como</option>    
+                    <?php
+                    foreach($rol as $rolUsuario=>$value):
+                        ?>
+                        <option value="<?php echo $value['id'];?>"><?php echo $value['nombre'];?></option>
+                        <?php 
+                        endforeach;
+                        ?>
                     </select>
                 </div>
 
