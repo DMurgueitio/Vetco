@@ -63,6 +63,7 @@ $TipoServicio = ControladorFormularios::ctrSeleccionarRegistrosTablaTipoServicio
                             <div class="col-sm-3 mt-2">
                                 <button type="submit" class="btn1"><i class="fa-solid fa-delete-left"></i> Atras</button>
                             </div>
+                            
                     </div>
             </div> <!--Div container fluid-->
         </form>

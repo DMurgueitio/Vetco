@@ -105,20 +105,6 @@ class ControladorFormularios
     }
     /* Fin Formulario Registro  Usuario */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /*=============================================
 		INICIO INSERCION A LA TABLA SERVICIOS
 		=============================================*/
@@ -144,7 +130,29 @@ class ControladorFormularios
             return $respuesta;
         }
     }
-    /* REGISTRO SERVICOS*/
+    /* REGISTRO MODIFICAR SERVICOS*/
+
+    static public function ctrModificarRegistroServicios()
+    {
+        if (isset($_POST["nombreComercio"])) {
+
+            $tabla = "tblservicios";
+
+            $datos = array(
+                "nombreEmpresa" => $_POST["nombreComercio"],
+                "TelUno" => $_POST["telefonouno"],
+                "TelDos" => $_POST["telefonodos"],
+                "documento" => $_SESSION["documento"],
+                "TipoServicio" => $_POST["tiposervicio"],
+                "DescripcionServicio" => $_POST["descripcionServicio"],
+                "horarioAtencion" => $_POST["horarioatencion"]
+            );
+
+            $respuesta = ModeloFormularios::mdlModificarRegistroServicios($tabla, $datos);
+            return $respuesta;
+        }
+    }
+    /* REGISTRO MODIFICAR SERVICOS*/
 
     /*=============================================
 		INICIO INSERCION A LA TABLA ROL
@@ -233,6 +241,14 @@ class ControladorFormularios
     }
 
     static public function ctrSeleccionarRegistrosTablaTipoServicio($item, $valor)
+    {
+        $tabla = "tbltiposervicio";
+
+        $respuesta = ModeloFormularios::mdlSeleccionarRegistroTablaTipoServicio($tabla, $item, $valor);
+
+        return $respuesta;
+    }
+    static public function ctrSeleccionarModificarRegistrosTablaTipoServicio($item, $valor)
     {
         $tabla = "tbltiposervicio";
 

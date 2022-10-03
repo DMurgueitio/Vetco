@@ -217,6 +217,20 @@ static public function mdlSeleccionarRegistroTablaTipoServicio($tabla, $item, $v
     $stmt = null;
 }
 
+static public function mdlSeleccionarModificarRegistroTablaTipoServicio($tabla, $item, $valor){
+    if($item == null && $valor == null){
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET `di`='default',`nombres`='?',
+                                                `apellidos`='?',`tipodi`='?',`email`='?',`ciudad`='?',
+                                                `direccion`='?',`rol`='?',`telefonocel`='?',`telefonofijo`='?',
+                                                `contrasena`='?',`codiGenero`='?'");
+
+        $stmt ->execute();
+        return $stmt -> fetchAll();
+    }
+    $stmt->Close();
+    $stmt = null;
+}
+
 static public function mdlSeleccionarRegistrosTablaRaza($tabla, $item, $valor){
     if($item == null && $valor == null){
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");

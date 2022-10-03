@@ -141,7 +141,7 @@
             || $_GET["pagina"] == "cerrarSesion" || $_GET["pagina"] == "paginaPrincipal"
             || $_GET["pagina"] == "crear_usuario" || $_GET["pagina"] == "Formulariopublicarservicio"
             || $_GET["pagina"] == "rol2" || $_GET["pagina"] == "rol3" || $_GET["pagina"] == "muestraResultadosBusqueda"
-            || $_GET["pagina"] == "vistaInfoEmpresa"
+            || $_GET["pagina"] == "vistaInfoEmpresa" || $_GET["pagina"] == "HistoriaClinica"
         ) {
             include $_GET["pagina"] . ".php";
         } else {
